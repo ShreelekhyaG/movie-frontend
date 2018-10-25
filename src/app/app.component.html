@@ -1,3 +1,4 @@
 <nav class="bg-light">
-<app-header></app-header>
+<app-header (sendToApp)="onReceiving($event)"></app-header>
 </nav>
+<app-movie-cards [movieList]=send()></app-movie-cards>

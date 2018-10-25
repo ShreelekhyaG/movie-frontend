@@ -1,5 +1,5 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-search-dummy',
   templateUrl: './search-dummy.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 })
 export class SearchDummyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -15,6 +15,7 @@ export class SearchDummyComponent implements OnInit {
   @Output() sendToSmarty =new EventEmitter<string>();
   search(){
     this.sendToSmarty.emit(this.query);
+   // this.router.navigate(['/search',this.query]);
   }
 
 }

@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movie-cruiser-front';
+  movieList="mn";
+  onReceiving(movieL:string){
+    this.movieList=movieL;
+    console.log(this.movieList);
+  }
+  send(){
+    return this.movieList;
+  }
 }

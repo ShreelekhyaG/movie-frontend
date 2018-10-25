@@ -3,4 +3,13 @@
 <input class="col-7 mr-2" type="text" [(ngModel)]="query" #searchId>
 <button class="btn-sm btn-outline-success" type="submit" (click)=search()>Search</button>
 </div>
+<!-- <form class="form-inline">
+    <div class="form-group">
+      <input type="search"
+             class="form-control"
+             (keypup)="doSearch"
+             placeholder="Enter search string"
+             [formControl]="searchField">
+    </div>
+  </form> -->
 </div>
